@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
-import { Router, Routes } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+import StartPage from './pages/StartPage';
+import FilmPage from './pages/FilmPage';
+import FavPage from './pages/FavPage';
 
 
 function App() {
@@ -9,7 +12,7 @@ function App() {
 			<Routes>
 				<Route path="/" element={<StartPage />} />
 				<Route path="films" element={<FilmPage />} />
-        <Route path="/favs" element={<FavPage />} />
+        <Route path="favs" element={<FavPage />} />
 			</Routes>
 		</BrowserRouter>
     );
