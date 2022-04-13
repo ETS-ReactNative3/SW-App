@@ -8,16 +8,14 @@ export default function FilmCard(props) {
 
     const [films, setFilms] = useState([])
 
-    const coverImages = [];
-
     useEffect(() => {
         axios
             .get("https://swapi.dev/api/films")
             .then((response) => {
-                console.log('response.data', response.data.results);
+                // console.log('response.data', response.data.results);
                 setFilms(response.data.results.sort(
                     function(a, b) { 
-                    return parseInt(a.episode_id) - parseInt(b.episode_id) 
+                    return parseInt(a.episode_id) - parseInt(b.episode_id)
                 }))
             });
     }, [] );

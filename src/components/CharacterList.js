@@ -1,15 +1,24 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios';
 
+import PopUpCharacterDetails from './PopUpCharacterDetails';
+
 export default function CharacterList(props) {
     
     const [characters, setCharacters] = useState([])
+    const [characterToBeShown, setCharacterToBeShown] = useState(null)
+    const [showPopUp, setShowPopUp] = useState(false)
 
+    //handle Pop-Up
+    const handlePopUp = character => {
+        setCharacterToBeShown(character)
+    }
+
+    // get the single characters and store them in the characters state
         useEffect(() => {
             axios
                 .get(props.character)
                 .then((response) => {
-                    console.log('response.data', response.data);
                     setCharacters([...characters, response.data])
                 });
         }, [] );
@@ -21,7 +30,10 @@ export default function CharacterList(props) {
     {characters.map((character) => {
         return (
             <ul>
-                <li><button>{character.name}</button></li>
+                <li><button onClick={() => {setShowPopUp(!showPopUp)}}>{character.name}</button></li>
+                {showPopUp && (
+                    <PopUpCharacterDetails character={character} handleClose={() => setShowPopUp(false)}/>
+                )}
             </ul>
         )
     })}
