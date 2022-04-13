@@ -5,10 +5,10 @@ import FilmList from '../components/FilmList'
 
 export default function FilmPage() {
   return (
-    <>
+    <div>
         <NavBar />
-        <Title>The Films</Title>
+        <h1>The Films</h1>
         <FilmList />
-    </>
+    </div>
   )
 }

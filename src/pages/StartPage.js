@@ -7,10 +7,10 @@ import Heading from '../components/Heading'
 
 export default function StartPage() {
   return (
-    <>
+    <div>
     <NavBar />
     <Heading />
     <Link to={"/films"}>Show all Star Wars films</Link>
-    </>
+    </div>
   )
 }

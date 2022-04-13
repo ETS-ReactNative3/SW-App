@@ -5,11 +5,12 @@ export default function NavBar() {
   return (
     <nav>
       <div>
+      <Link to={"/"}>Homebase</Link>
         <Link to={"/films"}>Film Collection</Link>
       </div>
       <div>
-        <Link to={"/films"}>Film Collection</Link>
-        <Link to={"/films"}>Film Collection</Link>
+        <Link to={"/films"}>Login</Link>
+        <Link to={"/films"}>Sign Up</Link>
       </div>
     </nav>
   )
