@@ -2,10 +2,13 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 
 import ToggleHeart from './ToggleHeart';
+import CharacterList from './CharacterList';
 
-export default function FilmCard() {
+export default function FilmCard(props) {
 
     const [films, setFilms] = useState([])
+
+    const coverImages = [];
 
     useEffect(() => {
         axios
@@ -25,18 +28,34 @@ export default function FilmCard() {
 	<div>
       {films.map(film => {
         return (
-            <div key={film.episode_id}>
+      <div key={film.episode_id} className="flip-card-outer">
+      <div className="flip-card-inner">
+        <div className="card front">
+          <div className="card-body d-flex justify-content-center align-items-center">
             <h1>{film.episode_id}</h1>
-            <div>
-                <h3>{film.title}</h3>
+            <h3>{film.title}</h3>
             <ToggleHeart /> 
-            </div>
-            </div>
-        )
-      }
-      )}
+          </div>
+        </div>
+        <div className="card back">
+          <div className="card-body justify-content-center align-items-center">
+            <h3>{film.title}</h3>
+            <h3>Director Name</h3>
+            <h3>{film.director}</h3>
+            <h3>Description</h3>
+            <h3>{film.opening_crawl}</h3>
+            <h3>Cover Picture</h3>
+            {film.characters.map(character =>
+                <CharacterList character={character}/>
+            )}
+            <ToggleHeart /> 
+          </div>
+        </div>
+      </div>
     </div>
-    }
+    )})}
+    </div>
+    } 
     </div>
   )
 }

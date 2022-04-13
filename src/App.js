@@ -1,6 +1,9 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./styles/styles.scss";
+
 import StartPage from './pages/StartPage';
 import FilmPage from './pages/FilmPage';
 import FavPage from './pages/FavPage';

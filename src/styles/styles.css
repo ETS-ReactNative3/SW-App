@@ -1,0 +1,9 @@
+header {
+  background: lightblue;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+/*# sourceMappingURL=style.css.map */
