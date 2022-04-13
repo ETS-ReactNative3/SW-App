@@ -37,12 +37,10 @@ export default function FilmCard(props) {
         </div>
         <div className="card back">
           <div className="card-body justify-content-center align-items-center">
-            <h3>{film.title}</h3>
-            <h3>Director Name</h3>
-            <h3>{film.director}</h3>
-            <h3>Description</h3>
-            <h3>{film.opening_crawl}</h3>
-            <h3>Cover Picture</h3>
+            <h3>Title: {film.title}</h3>
+            <h3>Director: {film.director}</h3>
+            <h3>Description: {film.opening_crawl}</h3>
+            <h3>Characters</h3>
             {film.characters.map(character =>
                 <CharacterList character={character}/>
             )}

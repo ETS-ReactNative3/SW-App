@@ -3,8 +3,8 @@ import FilmCard from './FilmCard'
 
 export default function FilmList() {
   return (
-    <div>
+    <React.Fragment>
         <FilmCard />
-    </div>
+    </React.Fragment>
   )
 }

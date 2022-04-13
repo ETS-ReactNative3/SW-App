@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { compileString } from 'sass'
+import ToggleHeart from './ToggleHeart';
 
 export default function PopUpCharacterDetails(props) {
 
@@ -24,6 +25,7 @@ export default function PopUpCharacterDetails(props) {
         <h5>Homeworld: {homeworld.name}</h5>
         <h5>Description: {props.character.name} has {props.character.hair_color} hair, is {props.character.eye_color} eyed and {props.character.height} tall.</h5>
         <h5>Image</h5>
+        <ToggleHeart/>
     </div>
     }
     </div>

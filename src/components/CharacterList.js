@@ -6,13 +6,7 @@ import PopUpCharacterDetails from './PopUpCharacterDetails';
 export default function CharacterList(props) {
     
     const [characters, setCharacters] = useState([])
-    const [characterToBeShown, setCharacterToBeShown] = useState(null)
     const [showPopUp, setShowPopUp] = useState(false)
-
-    //handle Pop-Up
-    const handlePopUp = character => {
-        setCharacterToBeShown(character)
-    }
 
     // get the single characters and store them in the characters state
         useEffect(() => {
@@ -26,19 +20,19 @@ export default function CharacterList(props) {
     return (
     <div>
     {characters === [] ? <div>Loading ...</div> :
-    <div>
+    <ul>
     {characters.map((character) => {
         return (
-            <ul>
-                <li><button onClick={() => {setShowPopUp(!showPopUp)}}>{character.name}</button></li>
+            <React.Fragment>
+            <li onClick={() => {setShowPopUp(!showPopUp)}}>{character.name}</li>
                 {showPopUp && (
                     <PopUpCharacterDetails character={character} handleClose={() => setShowPopUp(false)}/>
                 )}
-            </ul>
+            </React.Fragment>
         )
     })}
-    </div>
-    }
+    </ul>
+    } 
     </div>
     )
 }
