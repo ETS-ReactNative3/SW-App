@@ -1,17 +1,18 @@
 import React, { useState } from 'react'
 
 export default function ToggleHeart(props) {
+  
+  const getFavoriteFilms = JSON.parse(localStorage.getItem('favoriteFilms') || '0')
 
-  const [isFavorite, setIsFavorite] = useState(false)
+  const [isFavorite, setIsFavorite] = useState(getFavoriteFilms.some(e => JSON.stringify(e.title) === JSON.stringify(props.film.title)))
   const [selectedFilm, setSelectedFilm] = useState([])
 
-  const handleIsFavorite = () => {
-    setIsFavorite(!isFavorite);
+    const handleIsFavorite = () => {
+      setIsFavorite(!isFavorite);
   }
 
   const addFav = () => {
     let array = selectedFilm;
-    console.log('array',array)
     let addArray = true;
     array.map((item, key) => {
       if (item === props.film) {
@@ -23,7 +24,6 @@ export default function ToggleHeart(props) {
       array.push(props.film);
     }
     setSelectedFilm([...array])
-    
 
     // check if localStorage with key 'favoriteFilms' exists
     const favoriteFilms = localStorage.getItem('favoriteFilms');
@@ -33,33 +33,29 @@ export default function ToggleHeart(props) {
       var existingStorage = JSON.parse(localStorage.getItem('favoriteFilms'));
       existingStorage.push(props.film)
       var updatedStorage = localStorage.setItem('favoriteFilms', JSON.stringify(existingStorage))
-  }
+    }
     else {
       // create new storage
       console.log('Storage not found, creating new Storage');
       localStorage.setItem('favoriteFilms', JSON.stringify(selectedFilm))
-  }
+    }
   }
 
-const removeFav = () => {
+  const removeFav = () => {
   var existingStorage = JSON.parse(localStorage.getItem('favoriteFilms'));
-  console.log('existingStorage', existingStorage)
+  // console.log('existingStorage', existingStorage)
   existingStorage.forEach((storedFilm, index) => {
-    console.log(storedFilm.title)
-    console.log(index)
     // if title from stored film === title of film to be removed, remove it from existing Storage
     if (storedFilm.title === props.film.title) {
       return existingStorage.splice(index, 1);
     }
   });
   localStorage.setItem('favoriteFilms', JSON.stringify(existingStorage))
-  console.log('existingStorage', existingStorage)
-}
+  console.log('deleted')
+  }
 
   return (
     <div onClick={handleIsFavorite}>
-    {/* // <div>
-    //   {favorites.includes(props.film) */}
       {isFavorite
         ?  (<button onClick={removeFav}>
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-suit-heart-fill" viewBox="0 0 16 16">
