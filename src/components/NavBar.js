@@ -14,10 +14,10 @@ export default function NavBar() {
           </svg>
         </Link>
       </div>
-      <div>
+      {/* <div>
         <Link to={"/films"}>Login</Link>
         <Link to={"/films"}>Sign Up</Link>
-      </div>
+      </div> */}
     </nav>
   )
 }

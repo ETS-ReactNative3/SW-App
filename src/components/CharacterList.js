@@ -9,13 +9,13 @@ export default function CharacterList(props) {
     const [showPopUp, setShowPopUp] = useState(false)
 
     // get the single characters and store them in the characters state
-        useEffect(() => {
-            axios
-                .get(props.character)
-                .then((response) => {
-                    setCharacters([...characters, response.data])
-                });
-        }, [] );
+    useEffect(() => {
+        axios.get(props.character)
+            .then((response) => {
+                setCharacters([...characters, response.data])
+            })
+            .catch(err => console.log(err))
+    }, [] );
   
     return (
     <div>

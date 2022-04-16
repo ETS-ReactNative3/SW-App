@@ -1,6 +1,5 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
-import { compileString } from 'sass'
 import ToggleHeart from './ToggleHeart';
 
 export default function PopUpCharacterDetails(props) {
@@ -13,7 +12,8 @@ export default function PopUpCharacterDetails(props) {
             .then((response) => {
                 // console.log('response.data', response.data);
                 setHomeworld(response.data)
-            });
+            })
+            .catch(err => console.log(err))
     }, [] );
 
     return (
