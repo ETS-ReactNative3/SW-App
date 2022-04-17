@@ -4,18 +4,14 @@ import { FcLikePlaceholder } from 'react-icons/fc';
 
 export default function ToggleHeartCharacter(props) {
   
-  const [isFavorite, setIsFavorite] = useState(useFavorite)
+  const [isFavorite, setIsFavorite] = useState(false)
   const [selectedCharacter, setSelectedCharacter] = useState([])
-
-  let useFavorite;
 
   const checkFavorites = () => { 
     const getFavoriteCharacters = JSON.parse(localStorage.getItem('favoriteCharacters') || null)
     if (getFavoriteCharacters !== null){
-      useFavorite = (getFavoriteCharacters.some(e => JSON.stringify(e.name) === JSON.stringify(props.character.name)))
+      setIsFavorite(getFavoriteCharacters.some(e => JSON.stringify(e.name) === JSON.stringify(props.character.name)))
     }
-    console.log('useFav', useFavorite)
-    return useFavorite
   }
  
   useEffect(() => {

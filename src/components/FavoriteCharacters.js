@@ -7,14 +7,14 @@ const getFavCharacters = JSON.parse(localStorage.getItem('favoriteCharacters') |
   return(
     <React.Fragment>
       {getFavCharacters === null ? <div>No favs saved yet...</div> :
-        <div>
+        <React.Fragment>
         {getFavCharacters.map(character =>
-          <div>
+          <div className='favorite-div'>
             <h1>{character.name}</h1>
           </div>
         )
         }
-        </div>
+        </React.Fragment>
       }
     </React.Fragment>
   )

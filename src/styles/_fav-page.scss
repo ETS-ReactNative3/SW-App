@@ -1,16 +1,54 @@
 .bg-fav {
+    width: 100%;
+    height: 100%;
     background-image: url('../../public/bg/desert.jpg');
     background-position: 16% 20%;
     background-size: cover;
 }
+.container-fav {
+    width: 100vw;
+    height: 100vh;
+    @include flexCenter(column);
+    justify-content: flex-start;
+  }
 .fav-title {
-    display: flex;
+    width: 100vw;
     text-align: center;
     font-family: $fontAudiowide;
     font-size: 2.2em;
     font-weight: 900;
     text-decoration: none;
-    color: pink;
+    color: $transparent-blue;
     background-color: rgba(255, 105, 180, 0.712);
     padding: 5px 10px;
 }
+.favorite-div {
+    h1 {
+    color: $transparent-blue;
+    font-size: 1.8em;
+    display: inline;
+    &:hover {
+        padding: 0px 15px;
+        border-radius: 8px;
+        background-color: rgba(255, 105, 180, 0.712);
+    }
+    }
+    img {
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        border: 0px;
+        margin: 3px;
+        margin-right: 10px;
+    }
+}
+@media screen and (min-width: 992px){
+    .container-fav {
+    @include flexCenter(row);
+    align-items: flex-start;
+    padding-top: 10vh;
+   }
+   .fav-title {
+       width: 50vw;
+    }
+   }

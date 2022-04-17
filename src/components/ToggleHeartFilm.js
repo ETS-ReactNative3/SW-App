@@ -7,6 +7,7 @@ export default function ToggleHeartFilm(props) {
   const [isFavorite, setIsFavorite] = useState(false)
   const [selectedFilm, setSelectedFilm] = useState([])
 
+  // check Favorites when page is refreshed
   const checkFavorites = () => { 
     const getFavoriteFilms = JSON.parse(localStorage.getItem('favoriteFilms') || null)
     // console.log(getFavoriteFilms)
