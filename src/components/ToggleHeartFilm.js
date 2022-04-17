@@ -3,23 +3,18 @@ import { FcLike } from 'react-icons/fc';
 import { FcLikePlaceholder } from 'react-icons/fc';
 
 export default function ToggleHeartFilm(props) {
-  
-  const [isFavorite, setIsFavorite] = useState(useFavorite)
-  const [selectedFilm, setSelectedFilm] = useState([])
 
-  let useFavorite;
+  const [isFavorite, setIsFavorite] = useState(false)
+  const [selectedFilm, setSelectedFilm] = useState([])
 
   const checkFavorites = () => { 
     const getFavoriteFilms = JSON.parse(localStorage.getItem('favoriteFilms') || null)
-    console.log(getFavoriteFilms)
+    // console.log(getFavoriteFilms)
     if (getFavoriteFilms !== null){
-      useFavorite = (getFavoriteFilms.some(e => JSON.stringify(e.title) === JSON.stringify(props.film.title)))
+      setIsFavorite(getFavoriteFilms.some(e => JSON.stringify(e.title) === JSON.stringify(props.film.title)))
     }
-    console.log('useFav', useFavorite)
-    return useFavorite
-    
   }
-  
+
   useEffect(() => {
     checkFavorites()
   }, [])

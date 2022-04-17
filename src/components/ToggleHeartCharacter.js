@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { FcLike } from 'react-icons/fc';
 import { FcLikePlaceholder } from 'react-icons/fc';
 
-export default function ToggleHeartFilm(props) {
+export default function ToggleHeartCharacter(props) {
   
   const [isFavorite, setIsFavorite] = useState(useFavorite)
   const [selectedCharacter, setSelectedCharacter] = useState([])
@@ -17,7 +17,7 @@ export default function ToggleHeartFilm(props) {
     console.log('useFav', useFavorite)
     return useFavorite
   }
-  
+ 
   useEffect(() => {
     checkFavorites()
   }, [])
@@ -42,12 +42,15 @@ export default function ToggleHeartFilm(props) {
 
     // check if localStorage with key 'favoriteFilms' exists
     const favoriteCharacters = localStorage.getItem('favoriteCharacters');
+    
     if(favoriteCharacters){
       console.log('appending to existing Storage');
-      // if favoriteCharacters exists append data to the existing data of localStorage
+      // if favoriteCharacters exists save the status quo
       var existingStorage = JSON.parse(localStorage.getItem('favoriteCharacters'));
+      // and append data to the existing data of localStorage
       existingStorage.push(props.character)
-      var updatedStorage = localStorage.setItem('favoriteCharacters', JSON.stringify(existingStorage))
+      // update Storage
+      localStorage.setItem('favoriteCharacters', JSON.stringify(existingStorage))
     }
     else {
       // create new storage
