@@ -24,7 +24,7 @@ export default function FilmList() {
   return (
 	<React.Fragment>
 	{films === [] ? <div>Loading ...</div> :
-    <div>
+    <div className='film-card-container'>
     {films.map(film =>
       <FilmCard film={film} />
     )}

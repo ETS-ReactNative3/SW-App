@@ -1,0 +1,14 @@
+nav {
+    @include flexCenter(row);
+    justify-content: space-between;
+    font-family: $fontMontserrat;
+    font-weight: 700;
+    width: 100vw;
+    height: 10vh;
+    padding: 5px 15vw;
+    font-size: 1.6em;
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.856);
+}

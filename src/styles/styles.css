@@ -1,65 +1,309 @@
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&family=Bebas+Neue&family=Montserrat:wght@900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&family=Bebas+Neue&family=Montserrat:wght@600&display=swap");
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-family: "Montserrat";
+  font-weight: 700;
+  width: 100vw;
+  height: 10vh;
+  padding: 5px 15vw;
+  font-size: 1.6em;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.856);
+}
+
+.star-wars-img {
+  width: 80vw;
+}
+
+.flying-around-animation {
+  -webkit-animation: flying-around 20s linear infinite;
+          animation: flying-around 20s linear infinite;
+}
+
+@-webkit-keyframes flying-around {
+  0% {
+    margin-top: 0px;
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+  50% {
+    margin-top: 100vh;
+    margin-left: 100vw;
+    -webkit-transform: rotate(1800deg);
+            transform: rotate(1800deg);
+  }
+  100% {
+    margin-top: 0px;
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+}
+
+@keyframes flying-around {
+  0% {
+    margin-top: 0px;
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+  50% {
+    margin-top: 100vh;
+    margin-left: 100vw;
+    -webkit-transform: rotate(1800deg);
+            transform: rotate(1800deg);
+  }
+  100% {
+    margin-top: 0px;
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+}
+
+.flying-around-animation-green {
+  -webkit-animation: flying-around-green 25s linear infinite;
+          animation: flying-around-green 25s linear infinite;
+}
+
+@-webkit-keyframes flying-around-green {
+  0% {
+    margin-left: 80vw;
+    -webkit-transform: rotate(1800deg);
+            transform: rotate(1800deg);
+  }
+  50% {
+    margin-top: 100vh;
+    margin-right: 100vw;
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+  75% {
+    margin-top: 0px;
+    margin-left: 0vw;
+    -webkit-transform: rotate(900deg);
+            transform: rotate(900deg);
+  }
+  100% {
+    margin-top: 0px;
+    margin-left: 80vw;
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+}
+
+@keyframes flying-around-green {
+  0% {
+    margin-left: 80vw;
+    -webkit-transform: rotate(1800deg);
+            transform: rotate(1800deg);
+  }
+  50% {
+    margin-top: 100vh;
+    margin-right: 100vw;
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+  75% {
+    margin-top: 0px;
+    margin-left: 0vw;
+    -webkit-transform: rotate(900deg);
+            transform: rotate(900deg);
+  }
+  100% {
+    margin-top: 0px;
+    margin-left: 80vw;
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+}
+
+.img-animated {
+  width: 40vw;
+}
+
+.img-animated-green {
+  width: 40vw;
+}
+
+.container-animation {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.film-card-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.filmcard-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: blue;
+  border: 2px solid green;
+  color: white;
+  font-family: "Audiowide";
+  font-size: 1.6em;
+  text-align: center;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 3px;
+}
+
+.filmcard-container img {
+  width: 40vw;
+}
+
+.filmcard-container div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.filmcard-container div h1 {
+  font-size: 5em;
+}
+
 body {
-  font-family: 'Ubuntu', sans-serif;
-  background-image: radial-gradient(farthest-corner at 40px 40px, #f35 0%, #43e 100%);
+  font-size: 10px;
+}
+
+h1 {
+  font-family: "Audiowide";
+}
+
+h2 {
+  font-family: "Montserrat";
+  text-align: center;
+}
+
+h4 {
+  font-family: "Montserrat";
+  text-align: center;
+  font-weight: 600;
+}
+
+.link {
+  text-decoration: none;
+  color: white;
+}
+
+.bg {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../../public/bg/star_wars-10.jpg");
+  color: white;
+  background-position: center;
+  background-size: cover;
+}
+
+.laser-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  font-family: "Audiowide";
+  font-size: 2em;
+  font-weight: 900;
+  text-decoration: none;
+  color: pink;
+  background-color: hotpink;
+  padding: 5px 10px;
+  border-radius: 8px;
+}
+
+.laser-link:hover {
+  background-image: url("../../public/pngs/green-laser.png");
 }
 
 .container {
-  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  padding-top: 2vh;
 }
 
-.flip-card-outer {
-  width: 300px;
-  height: 400px;
-  margin: 25px 0;
+.padding-top {
+  padding-top: 8vh;
 }
 
-.flip-card-outer.focus-trigger:focus {
-  outline: 5px solid greenyellow;
-  outline-offset: 5px;
+.btn-heart {
+  height: 40px;
+  width: 40px;
+  background-color: hotpink;
+  border-radius: 50px;
+  border: 0px;
 }
 
-.flip-card-outer .flip-card-inner {
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-  -webkit-transition: .5s linear .1s;
-  transition: .5s linear .1s;
-  position: relative;
-  width: inherit;
-  height: inherit;
-}
-
-.flip-card-outer .flip-card-inner.hover-trigger:hover {
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
-}
-
-.flip-card-outer .flip-card-inner.showBack {
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
-}
-
-.flip-card-outer .flip-card-inner .card {
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.flip-card-outer .flip-card-inner .card.front {
-  -webkit-transform: rotateY(0);
-          transform: rotateY(0);
-  background-color: #2d2d2d;
-  color: #fff;
-}
-
-.flip-card-outer .flip-card-inner .card.back {
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
-  background-color: #fff;
-  color: #2d2d2d;
+.img-heart {
+  height: 20px;
 }
 /*# sourceMappingURL=styles.css.map */

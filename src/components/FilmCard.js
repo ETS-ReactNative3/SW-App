@@ -1,17 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
-import ToggleHeart from './ToggleHeart';
+import ToggleHeartFilm from './ToggleHeartFilm';
 
 export default function FilmCard(props) {
-    
+  
     return (
       <React.Fragment>
-          <div key={props.film.episode_id}>
-            <h1 >{props.film.episode_id}</h1>
-            <Link to={`/films/${props.film.episode_id}`}><h3>{props.film.title}</h3></Link>
-            <ToggleHeart film={props.film}/>
+        <div className='filmcard-container' key={props.film.episode_id}>
+          <img src={`/film-covers/${props.film.episode_id}.jpg`} alt='Cover-Image'/>
+          <div>
+            <h1>{props.film.episode_id}</h1> 
+            <Link className='link filmtitle' to={`/films/${props.film.episode_id}`}>{props.film.title}</Link>
+            <ToggleHeartFilm film={props.film}/>
           </div>
+        </div>
       </React.Fragment>
     )
 }

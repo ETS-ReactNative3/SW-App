@@ -6,9 +6,11 @@ import FilmList from '../components/FilmList'
 export default function FilmPage() {
   return (
     <div>
-        <NavBar />
-        <h1>The Films</h1>
+      <NavBar />
+      <div className='container'>
+        <h1>Star Wars Filmlist</h1>
         <FilmList />
+      </div>
     </div>
   )
 }

@@ -1,7 +1,5 @@
 import React from 'react'
-
 import CharacterList from './CharacterList'
-import ToggleHeart from './ToggleHeart'
 
 export default function FilmDetails(props) {
 
@@ -14,7 +12,6 @@ export default function FilmDetails(props) {
       {props.film.characters.map(character =>
           <CharacterList character={character}/>
       )}
-      <ToggleHeart /> 
     </div>
   )
 }

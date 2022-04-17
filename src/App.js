@@ -9,6 +9,7 @@ import FilmPage from './pages/FilmPage';
 import FilmDetailPage from './pages/FilmDetailPage';
 import FavPage from './pages/FavPage';
 
+import './styles/styles.css'
 
 function App() {
   return (

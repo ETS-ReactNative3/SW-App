@@ -1,0 +1,25 @@
+.film-card-container{
+    @include flexCenter(column);
+}
+.filmcard-container {
+    @include flexCenter(row);
+    justify-content: space-between;
+    background-color: blue;
+    border: 2px solid green;
+    color: $white;
+    font-family: $fontAudiowide;
+    font-size: 1.6em;
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 3px;
+    img {
+        width: $img-width;
+    }
+    div {
+      @include flexCenter(column);
+      h1 {
+          font-size: 5em;
+      }
+    }
+   }

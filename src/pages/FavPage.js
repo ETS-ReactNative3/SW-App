@@ -1,8 +1,9 @@
 import React from 'react'
 
 import NavBar from '../components/NavBar'
-import FavouriteMovies from '../components/FavouriteMovies'
-import FavouriteCharacters from '../components/FavouriteCharacters'
+import FavoriteFilms from '../components/FavoriteFilms'
+import FavoriteCharacters from '../components/FavoriteCharacters'
+import { FcLike } from 'react-icons/fc'
 
 export default function FavPage() {
   return (
@@ -12,19 +13,15 @@ export default function FavPage() {
       <h1>FavPage</h1>
       <div id='fav-movies'>
         <h1>Movies</h1>
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-suit-heart-fill" viewBox="0 0 16 16">
-          <path d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1z"/>
-        </svg>
-        <FavouriteMovies />
+        <FcLike/>
+        <FavoriteFilms />
       </div>
-      <div id='fav-characters'>
       <h1>Characters</h1>
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-suit-heart-fill" viewBox="0 0 16 16">
-          <path d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1z"/>
-        </svg>
+      <div id='fav-characters'>
+        <FcLike/>
+        <FavoriteCharacters />
       </div>
-      <FavouriteCharacters />
-      </div>
+      </div> 
     </React.Fragment>
   )
 }
