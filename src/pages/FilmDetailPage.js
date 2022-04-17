@@ -8,23 +8,12 @@ import FilmDetails from '../components/FilmDetails'
 
 export default function FilmDetailPage() {
 
-  const [film, setFilm] = useState(null)
-  const { id } = useParams()
-
-  useEffect(() => {
-    axios.get(`https://swapi.dev/api/films/${id}`)
-      .then(response => {
-        setFilm(response.data)
-      })
-      .catch(err => console.log(err))
-  })
+  const getFilm = JSON.parse(localStorage.getItem('filmDetails'))
 
   return (
-    <React.Fragment>
+    <div className='fixed-background'>
     <NavBar />
-		{film === null ? <div>Loading ...</div> :
-      <FilmDetails film={film}/>
-    }
-    </React.Fragment>
+      <FilmDetails film={getFilm}/>
+    </div>
   )
 }

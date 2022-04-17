@@ -3,17 +3,25 @@ import { Link } from 'react-router-dom';
 import ToggleHeartFilm from './ToggleHeartFilm';
 
 export default function FilmCard(props) {
+
+const storeFilm = () => {
+  localStorage.setItem('filmDetails', JSON.stringify(props.film));
+  console.log('stored')
+}
   
     return (
-      <React.Fragment>
         <div className='filmcard-container' key={props.film.episode_id}>
-          <img src={`/film-covers/${props.film.episode_id}.jpg`} alt='Cover-Image'/>
+        <Link className='link' to={`/films/${props.film.episode_id}`} onClick={storeFilm}>
+          <img src={`/film-covers/${props.film.episode_id}.jpg`} alt='Cover-Image'/> 
+        </Link>
           <div>
-            <h1>{props.film.episode_id}</h1> 
-            <Link className='link filmtitle' to={`/films/${props.film.episode_id}`}>{props.film.title}</Link>
+            <Link className='link' to={`/films/${props.film.episode_id}`} onClick={storeFilm}>
+              <h1>{props.film.episode_id}</h1>
+              <h3>{props.film.title}</h3>
+            </Link>
             <ToggleHeartFilm film={props.film}/>
           </div>
         </div>
-      </React.Fragment>
+        
     )
 }

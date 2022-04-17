@@ -28,11 +28,12 @@ nav {
   position: sticky;
   top: 0;
   overflow: hidden;
-  background-color: rgba(0, 0, 0, 0.856);
+  background-color: rgba(0, 119, 255, 0.431);
 }
 
 .star-wars-img {
   width: 80vw;
+  z-index: 1;
 }
 
 .flying-around-animation {
@@ -150,20 +151,14 @@ nav {
   overflow: hidden;
 }
 
-.film-card-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.fixed-background {
+  height: 100%;
+  color: white;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-image: url("../../public/bg/universe-bg.jpg");
 }
 
 .filmcard-container {
@@ -183,19 +178,19 @@ nav {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background-color: blue;
-  border: 2px solid green;
+  background-color: rgba(0, 119, 255, 0.431);
   color: white;
   font-family: "Audiowide";
   font-size: 1.6em;
   text-align: center;
   border-radius: 10px;
   padding: 10px;
-  margin: 3px;
+  margin: 15px 0px;
 }
 
 .filmcard-container img {
-  width: 40vw;
+  width: 150px;
+  border-radius: 8px;
 }
 
 .filmcard-container div {
@@ -218,12 +213,87 @@ nav {
   font-size: 5em;
 }
 
+.film-detail-card {
+  padding: 2vh;
+  background-color: rgba(0, 119, 255, 0.431);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.film-detail-card img {
+  width: 80vw;
+  margin-bottom: 2vh;
+  border-radius: 20px;
+}
+
+.film-detail-card ul {
+  font-size: 1.8em;
+  list-style-type: georgian;
+}
+
+.film-detail-card ul li {
+  color: hotpink;
+  font-weight: 700;
+}
+
+.film-detail-card ul li:hover {
+  border-radius: 8px;
+  background-color: rgba(255, 192, 203, 0.513);
+  padding-left: 15px;
+}
+
+.film-detail-card div {
+  padding: 20px;
+  background-color: rgba(0, 119, 255, 0.431);
+  border-radius: 10px;
+}
+
+.film-detail-card div img {
+  width: 70vw;
+}
+
+.film-detail-card h1, .film-detail-card h3 {
+  display: inline;
+}
+
+.bg-fav {
+  background-image: url("../../public/bg/desert.jpg");
+  background-position: 16% 20%;
+  background-size: cover;
+}
+
+.fav-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  font-family: "Audiowide";
+  font-size: 2.2em;
+  font-weight: 900;
+  text-decoration: none;
+  color: pink;
+  background-color: rgba(255, 105, 180, 0.712);
+  padding: 5px 10px;
+}
+
 body {
   font-size: 10px;
 }
 
 h1 {
   font-family: "Audiowide";
+  color: white;
 }
 
 h2 {
@@ -266,6 +336,7 @@ h4 {
   background-color: hotpink;
   padding: 5px 10px;
   border-radius: 8px;
+  z-index: 9;
 }
 
 .laser-link:hover {
@@ -296,14 +367,30 @@ h4 {
 }
 
 .btn-heart {
-  height: 40px;
-  width: 40px;
-  background-color: hotpink;
-  border-radius: 50px;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
   border: 0px;
 }
 
-.img-heart {
-  height: 20px;
+@media screen and (min-width: 992px) {
+  .container-row {
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-item-align: center;
+        align-self: center;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

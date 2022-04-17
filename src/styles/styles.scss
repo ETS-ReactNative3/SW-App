@@ -8,12 +8,15 @@
 @import './navbar';
 @import './home';
 @import './filmcard';
+@import './filmdetails';
+@import './fav-page';
 
  body {
    font-size: 10px;
  }
  h1 {
    font-family: $fontAudiowide;
+   color: $white;
  }
  h2 {
    font-family: $fontMontserrat;
@@ -48,6 +51,7 @@
     background-color: hotpink;
     padding: 5px 10px;
     border-radius: 8px;
+    z-index: 9;
     &:hover {
       background-image: url('../../public/pngs/green-laser.png');  
     }
@@ -61,12 +65,15 @@
    padding-top: 8vh;
  }
  .btn-heart {
-   height: 40px;
-   width: 40px;
-   background-color: hotpink;
-   border-radius: 50px;
+   height: 30px;
+   width: 30px;
+   border-radius: 50%;
    border: 0px;
  }
- .img-heart {
-   height: 20px;
- }
+ @media screen and (min-width: 992px){
+ .container-row {
+  height: 100vh;
+ @include flexCenter(row);
+ align-self: center;
+}
+}

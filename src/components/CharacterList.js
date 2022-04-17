@@ -18,7 +18,7 @@ export default function CharacterList(props) {
     }, [] );
   
     return (
-    <div>
+    <React.Fragment>
     {characters === [] ? <div>Loading ...</div> :
     <ul>
     {characters.map((character) => {
@@ -33,6 +33,6 @@ export default function CharacterList(props) {
     })}
     </ul>
     } 
-    </div>
+    </React.Fragment>
     )
 }

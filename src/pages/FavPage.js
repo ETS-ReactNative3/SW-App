@@ -7,21 +7,18 @@ import { FcLike } from 'react-icons/fc'
 
 export default function FavPage() {
   return (
-    <React.Fragment>
+    <div className='fixed-bg bg-fav'>
       <NavBar />
-      <div>
-      <h1>FavPage</h1>
-      <div id='fav-movies'>
-        <h1>Movies</h1>
-        <FcLike/>
-        <FavoriteFilms />
+      <div className='container-row'>
+        <div id='fav-movies'>
+          <h1 className='fav-title'><FcLike/>Movies<FcLike/></h1>
+            <FavoriteFilms />
+        </div>
+        <div id='fav-characters'>
+          <h1 className='fav-title'><FcLike/>Characters<FcLike/></h1>
+          <FavoriteCharacters />
+        </div>
       </div>
-      <h1>Characters</h1>
-      <div id='fav-characters'>
-        <FcLike/>
-        <FavoriteCharacters />
-      </div>
-      </div> 
-    </React.Fragment>
+    </div>
   )
 }
