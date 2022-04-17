@@ -263,8 +263,15 @@ nav {
   width: 70vw;
 }
 
-.film-detail-card h1, .film-detail-card h3 {
+.film-detail-card h2, .film-detail-card h3 {
   display: inline;
+}
+
+.film-detail-card h2 {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 2em;
+  color: hotpink;
 }
 
 .bg-fav {

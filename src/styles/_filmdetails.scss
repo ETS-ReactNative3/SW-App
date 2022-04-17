@@ -28,7 +28,13 @@
             width: 70vw;
         }
     }
-    h1, h3 {
+    h2, h3 {
         display: inline;
+    }
+    h2 {
+        font-family: $fontMontserrat;
+        font-weight: 700;
+        font-size: 2em;
+        color: hotpink;
     }
 }

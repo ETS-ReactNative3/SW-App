@@ -2,16 +2,21 @@ import React from 'react'
 
 export default function FavoriteFilms() {
 
-const getFilms = JSON.parse(localStorage.getItem('favoriteFilms') || null)
+const getFavFilms = JSON.parse(localStorage.getItem('favoriteFilms') || null)
+
 
   return(
-    <div>
-    {getFilms.map(film =>
-      <div key={film.episode_id}>
-        <h1>{film.title}</h1>
-      </div>
-    )
-    }
-    </div>
+    <React.Fragment>
+      {getFavFilms === null ? <div>No favs saved yet...</div> :
+        <div>
+        {getFavFilms.map(film =>
+          <div key={film.episode_id}>
+            <h1>{film.title}</h1>
+          </div>
+        )
+        }
+        </div>
+      }
+    </React.Fragment>
   )
 }

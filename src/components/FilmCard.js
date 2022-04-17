@@ -12,7 +12,7 @@ const storeFilm = () => {
     return (
         <div className='filmcard-container' key={props.film.episode_id}>
         <Link className='link' to={`/films/${props.film.episode_id}`} onClick={storeFilm}>
-          <img src={`/film-covers/${props.film.episode_id}.jpg`} alt='Cover-Image'/> 
+          <img src={`/film-covers/${props.film.episode_id}.jpg`} alt='filmposter'/> 
         </Link>
           <div>
             <Link className='link' to={`/films/${props.film.episode_id}`} onClick={storeFilm}>
