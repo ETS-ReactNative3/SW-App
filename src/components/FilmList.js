@@ -5,7 +5,6 @@ import FilmCard from './FilmCard'
 export default function FilmList() {
 
   const [films, setFilms] = useState([])
-  // console.log(films)
 
   useEffect(() => {
     axios

@@ -1,5 +1,4 @@
 import React from 'react'
-
 import NavBar from '../components/NavBar'
 import FilmDetails from '../components/FilmDetails'
 
@@ -10,7 +9,7 @@ export default function FilmDetailPage() {
 
   return (
     <div className='fixed-background'>
-    <NavBar />
+      <NavBar />
       <FilmDetails film={getFilm}/>
     </div>
   )

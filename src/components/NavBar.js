@@ -8,9 +8,7 @@ export default function NavBar() {
     <nav>
       <Link className='link' to={"/"}>Home</Link>
       <Link className='link' to={"/films"}>Collection</Link>
-      <Link className='link' to={"/favs"}>
-        <FcLike/>
-      </Link>
+      <Link className='link' to={"/favs"}><FcLike/></Link>
     </nav>
   )
 }

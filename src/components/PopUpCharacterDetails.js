@@ -17,17 +17,17 @@ export default function PopUpCharacterDetails(props) {
     }, [] );
 
     return (
-    <React.Fragment>
-    {homeworld === null ? <div>Loading ...</div> :
-    <div>
-        <img src='/characters/luke-skywalker.jpg' alt='young luke'/>
-        <h5>Name: {props.character.name}</h5>
-        <h5>Gender: {props.character.gender}</h5>
-        <h5>Homeworld: {homeworld.name}</h5>
-        <h5>Description: {props.character.name} has {props.character.hair_color} hair, is {props.character.eye_color} eyed and {props.character.height} tall.</h5>
-        <ToggleHeartCharacter character={props.character}/>
-    </div>
-    }
-    </React.Fragment>
-)
+        <React.Fragment>
+            {homeworld === null ? <div>Loading ...</div> :
+            <div>
+                <img src='/characters/luke-skywalker.jpg' alt='young luke'/>
+                <h5>Name: {props.character.name}</h5>
+                <h5>Gender: {props.character.gender}</h5>
+                <h5>Homeworld: {homeworld.name}</h5>
+                <h5>Description: {props.character.name} has {props.character.hair_color} hair, is {props.character.eye_color} eyed and {props.character.height} tall.</h5>
+                <ToggleHeartCharacter character={props.character}/>
+            </div>
+            }
+        </React.Fragment>
+    )
 }

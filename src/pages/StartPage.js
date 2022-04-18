@@ -18,24 +18,24 @@ export default function StartPage() {
 
   if (width < breakpoint) {
     return (
-    <React.Fragment>
-      <div className='container-animation'>
-        <img className='flying-around-animation img-animated' src='/pngs/pink-laser.png' alt='pink Laser'/>
-      </div>
-      <div className='container-animation'>
-        <img className='flying-around-animation-green img-animated-green' src='/pngs/laser-blue.webp' alt='green Laser'/>
-      </div>
-      <div className='bg'>
-      <NavBar />
-      <Heading />
-      </div>
-    </React.Fragment>
-  )
+      <React.Fragment>
+        <div className='container-animation'>
+          <img className='flying-around-animation img-animated' src='/pngs/pink-laser.png' alt='pink Laser'/>
+        </div>
+        <div className='container-animation'>
+          <img className='flying-around-animation-green img-animated-green' src='/pngs/laser-blue.webp' alt='green Laser'/>
+        </div>
+        <div className='bg'>
+        <NavBar />
+        <Heading />
+        </div>
+      </React.Fragment>
+    )
   }
   return (
     <div className='bg'>
-    <NavBar />
-    <Heading />
+      <NavBar />
+      <Heading />
     </div>
   )
 }

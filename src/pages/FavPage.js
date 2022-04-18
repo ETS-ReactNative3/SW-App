@@ -1,5 +1,4 @@
 import React from 'react'
-import { FcLike } from 'react-icons/fc'
 import NavBar from '../components/NavBar'
 import FavoriteFilms from '../components/FavoriteFilms'
 import FavoriteCharacters from '../components/FavoriteCharacters'

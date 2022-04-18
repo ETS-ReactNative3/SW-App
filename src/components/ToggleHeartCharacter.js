@@ -75,7 +75,7 @@ export default function ToggleHeartCharacter(props) {
             />)
         :   (<FcLikePlaceholder onClick={addFav}
             />) 
-        }
+      }
     </button>
   )
 }

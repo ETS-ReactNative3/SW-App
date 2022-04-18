@@ -35,7 +35,7 @@ export default function FilmDetails(props) {
           )}
         </div>
       </div>
-      </React.Fragment>
+    </React.Fragment>
   )
   }
   return (
