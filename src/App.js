@@ -1,13 +1,12 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import "./styles/styles.scss";
 import StartPage from './pages/StartPage';
 import FilmPage from './pages/FilmPage';
 import FilmDetailPage from './pages/FilmDetailPage';
 import FavPage from './pages/FavPage';
 import ErrorPage from './pages/ErrorPage';
-
-import './styles/styles.css'
+import './styles/styles.css';
+import "./styles/styles.scss";
 
 function App() {
   return (
