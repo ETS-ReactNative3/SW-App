@@ -68,7 +68,7 @@ export default function ToggleHeartFilm(props) {
   }
 
   return(
-    <button  className='btn-heart' onClick={handleIsFavorite}>
+    <button  className='btn-heart margin-btn' onClick={handleIsFavorite}>
       {isFavorite
         ?  (<FcLike onClick={removeFav}
             />)

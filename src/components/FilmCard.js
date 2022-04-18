@@ -17,11 +17,14 @@ const storeFilm = () => {
         </Link>
       </div>
       <div>
+        
         <Link className='link' to={`/films/${props.film.episode_id}`} onClick={storeFilm}>
           <h1>{props.film.episode_id}</h1>
           <h3>{props.film.title}</h3>
         </Link>
-        <ToggleHeartFilm film={props.film}/>
+        <div>
+          <ToggleHeartFilm film={props.film}/>
+        </div>
       </div>
     </div> 
   )

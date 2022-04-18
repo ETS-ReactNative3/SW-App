@@ -24,12 +24,16 @@
         border-radius: 8px;
     }
     div {
-      // background-color: aqua;
       @include flexCenter(column);
+      // background-color: antiquewhite;
       h1 {
-          font-size: 5em;
+          font-size: 4em;
       }
     }
+   }
+   .margin-btn {
+     margin-left: 170px;
+     padding-top: 5px;
    }
 
    @media screen and (min-width: 992px){

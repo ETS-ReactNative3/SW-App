@@ -223,7 +223,12 @@ nav {
 }
 
 .filmcard-container div h1 {
-  font-size: 5em;
+  font-size: 4em;
+}
+
+.margin-btn {
+  margin-left: 170px;
+  padding-top: 5px;
 }
 
 @media screen and (min-width: 992px) {
@@ -450,6 +455,7 @@ body {
 h1 {
   font-family: "Audiowide";
   color: white;
+  font-size: 2em;
 }
 
 h2 {
@@ -461,6 +467,7 @@ h4 {
   font-family: "Montserrat";
   text-align: center;
   font-weight: 600;
+  font-size: 1.8em;
 }
 
 .link {
@@ -536,6 +543,9 @@ h4 {
 }
 
 @media screen and (min-width: 992px) {
+  h1, h4 {
+    font-size: 2.4em;
+  }
   .padding-top {
     padding-top: 8vh;
   }
