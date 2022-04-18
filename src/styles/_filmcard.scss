@@ -1,0 +1,32 @@
+// background
+.fixed-background {
+    height: 100%;
+    color: $white;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url('../../public/bg/universe-bg.jpg')
+  }
+.filmcard-container {
+    @include flexCenter(row);
+    justify-content: space-between;
+    background-color: $transparent-blue;
+    color: $white;
+    font-family: $fontAudiowide;
+    font-size: 1.6em;
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 15px 0px;
+    img {
+        width: 150px;
+        border-radius: 8px;
+    }
+    div {
+      @include flexCenter(column);
+      h1 {
+          font-size: 5em;
+      }
+    }
+   }

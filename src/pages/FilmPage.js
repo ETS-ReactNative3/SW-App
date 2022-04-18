@@ -5,10 +5,12 @@ import FilmList from '../components/FilmList'
 
 export default function FilmPage() {
   return (
-    <>
-        <NavBar />
-        <Title>The Films</Title>
+    <div className='fixed-background'>
+      <NavBar />
+      <div className='container'>
+        <h1>Star Wars Filmlist</h1>
         <FilmList />
-    </>
+      </div>
+    </div>
   )
 }

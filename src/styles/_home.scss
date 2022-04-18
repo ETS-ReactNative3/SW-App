@@ -1,0 +1,61 @@
+.star-wars-img {
+    width: 80vw;
+    z-index: 1;
+}
+
+
+// ANIMATION
+  .flying-around-animation {
+    animation: flying-around 20s linear infinite;
+  }
+  @keyframes flying-around {
+    0% {
+        margin-top:0px;
+        transform: rotate(359deg);
+      }
+      50% {
+        margin-top:100vh;
+        margin-left: 100vw;
+        transform: rotate(1800deg);
+      }
+      100% {
+        margin-top: 0px;
+        transform: rotate(359deg);
+      }
+  }
+  .flying-around-animation-green {
+    animation: flying-around-green 25s linear infinite;
+  }
+  @keyframes flying-around-green {
+    0% {
+        margin-left: 80vw;
+        transform: rotate(1800deg);
+      }
+      50% {
+        margin-top:100vh;
+        margin-right: 100vw;
+        transform: rotate(359deg);
+      }
+      75% {
+        margin-top: 0px;
+        margin-left: 0vw;
+        transform: rotate(900deg);
+      }
+      100% {
+        margin-top:0px;
+        margin-left: 80vw;
+        transform: rotate(359deg);
+      }
+  }
+  .img-animated {
+     width: 40vw;
+  }
+  .img-animated-green {
+     width: 40vw;
+  }
+  .container-animation {  
+      position: absolute;  
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+  }

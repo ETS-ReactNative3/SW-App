@@ -1,13 +1,27 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import ToggleHeartFilm from './ToggleHeartFilm';
 
-export default function FilmCard() {
-  return (
-    <div>
-        <h1></h1>
-        <div>
-            <h2></h2>
-            <img></img>
+export default function FilmCard(props) {
+
+const storeFilm = () => {
+  localStorage.setItem('filmDetails', JSON.stringify(props.film));
+  console.log('stored')
+}
+  
+    return (
+        <div className='filmcard-container' key={props.film.episode_id}>
+        <Link className='link' to={`/films/${props.film.episode_id}`} onClick={storeFilm}>
+          <img src={`/film-covers/${props.film.episode_id}.jpg`} alt='filmposter'/> 
+        </Link>
+          <div>
+            <Link className='link' to={`/films/${props.film.episode_id}`} onClick={storeFilm}>
+              <h1>{props.film.episode_id}</h1>
+              <h3>{props.film.title}</h3>
+            </Link>
+            <ToggleHeartFilm film={props.film}/>
+          </div>
         </div>
-    </div>
-  )
+        
+    )
 }
