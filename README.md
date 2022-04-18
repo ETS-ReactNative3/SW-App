@@ -1,3 +1,23 @@
+The Star Wars Filmcollection App
+
+The Star Wars Filmcollection App uses SWAPI to show information about the Star Wars films and characters.
+
+#Navigations
+The Application has a Startpage, a Filmpage and a Favoritespage.
+The startpage serves as an Intro. From here you can follow the links in the Navbar or on the page to direct to the Filmcollection.
+Clicking on an item of the Filmcollection will lead you to a detailed View of the specific film you clicked.
+Next to the detail-info of the film you will see a list of Characters that play in the specific movie. The Characters names are links that open a detailed view of the specific character, when clicked on.
+The Filmcollection-view and the detailed View of the character have a heart-button. By clicking on it you can either save or delete the specifc item to a list of favorite films or characters.
+The lists with your chosen characters and films is displayed on the Favoritespage, which you can open by clicking the heart-icon in the Navbar.
+
+
+
+
+
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
