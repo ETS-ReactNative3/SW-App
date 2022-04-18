@@ -15,14 +15,13 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   font-family: "Montserrat";
   font-weight: 700;
   width: 100vw;
   height: 10vh;
-  padding: 5px 15vw;
   font-size: 1.6em;
   position: -webkit-sticky;
   position: sticky;
@@ -199,7 +198,7 @@ nav {
   text-align: center;
   border-radius: 10px;
   padding: 10px;
-  margin: 15px 0px;
+  margin: 15px 10px;
 }
 
 .filmcard-container img {
@@ -387,7 +386,7 @@ nav {
   text-decoration: none;
   color: rgba(0, 119, 255, 0.431);
   background-color: rgba(255, 105, 180, 0.712);
-  padding: 5px 10px;
+  padding: 5px 0px;
 }
 
 .favorite-div h1 {

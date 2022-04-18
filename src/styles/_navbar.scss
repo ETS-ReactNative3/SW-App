@@ -1,11 +1,10 @@
 nav {
     @include flexCenter(row);
-    justify-content: space-between;
+    justify-content: space-evenly;
     font-family: $fontMontserrat;
     font-weight: 700;
     width: 100vw;
     height: 10vh;
-    padding: 5px 15vw;
     font-size: 1.6em;
     position: sticky;
     top: 0;
