@@ -10,6 +10,7 @@ const getFavCharacters = JSON.parse(localStorage.getItem('favoriteCharacters') |
         <React.Fragment>
         {getFavCharacters.map(character =>
           <div className='favorite-div'>
+          <img className='fav-img' src={`/characters/r2d2.jpg`} alt='filmposter'/> 
             <h1>{character.name}</h1>
           </div>
         )

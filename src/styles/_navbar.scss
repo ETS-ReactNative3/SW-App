@@ -12,3 +12,9 @@ nav {
     overflow: hidden;
     background-color: $transparent-blue;
 }
+@media screen and (min-width: 992px){
+    nav {
+    justify-content: space-around;
+    font-size: 2em;
+   }
+}

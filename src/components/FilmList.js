@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
-
 import FilmCard from './FilmCard'
 
 export default function FilmList() {
@@ -22,14 +21,14 @@ export default function FilmList() {
   }, [] );
 
   return (
-	<React.Fragment>
-	{films === [] ? <div>Loading ...</div> :
-    <div className='film-card-container'>
-    {films.map(film =>
-      <FilmCard film={film} />
-    )}
-    </div>
-  } 
-  </React.Fragment>
+    <React.Fragment>
+      {films === [] ? <div>Loading ...</div> :
+        <div className='film-card-container'>
+        {films.map(film =>
+          <FilmCard film={film} />
+        )}
+        </div>
+      } 
+    </React.Fragment>
   )
 }

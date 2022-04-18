@@ -9,6 +9,9 @@ export default function FavPage() {
   return (
     <div className='fixed-bg bg-fav'>
       <NavBar />
+      <div className='container heading-fav '>
+        <h1>Favorites</h1>
+      </div>
       <div className='container-fav'>
         <div>
           <h1 className='fav-title'>Movies</h1>

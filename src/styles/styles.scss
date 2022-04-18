@@ -30,7 +30,10 @@
  .link {
    text-decoration: none;
    color: $white;
- }
+   &:hover {
+      transform: scale(1.1);
+  }
+}
  .bg { 
     width: 100vw;
     height: min($numbers: 100vh);
@@ -53,7 +56,8 @@
     border-radius: 8px;
     z-index: 9;
     &:hover {
-      background-image: url('../../public/pngs/green-laser.png');  
+      background-color: $transparent-blue;
+      color: pink;
     }
  }
  .container {
@@ -69,4 +73,15 @@
    width: 30px;
    border-radius: 50%;
    border: 0px;
+ }
+
+
+ @media screen and (min-width: 992px){
+  .padding-top {
+    padding-top: 8vh;
+ }
+ .laser-link {
+    margin-top: 2vh;
+    font-size: 2.6em;
+ }
  }

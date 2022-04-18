@@ -31,6 +31,14 @@ nav {
   background-color: rgba(0, 119, 255, 0.431);
 }
 
+@media screen and (min-width: 992px) {
+  nav {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    font-size: 2em;
+  }
+}
+
 .star-wars-img {
   width: 80vw;
   z-index: 1;
@@ -151,6 +159,12 @@ nav {
   overflow: hidden;
 }
 
+@media screen and (min-width: 992px) {
+  .star-wars-img {
+    width: 50vw;
+  }
+}
+
 .fixed-background {
   height: 100%;
   color: white;
@@ -211,6 +225,16 @@ nav {
 
 .filmcard-container div h1 {
   font-size: 5em;
+}
+
+@media screen and (min-width: 992px) {
+  .filmcard-container {
+    padding: 40px 10px;
+  }
+  .filmcard-container div {
+    width: 300px;
+    height: 200px;
+  }
 }
 
 .film-detail-card {
@@ -274,6 +298,53 @@ nav {
   color: hotpink;
 }
 
+@media screen and (min-width: 992px) {
+  .film-detail-card-desktop {
+    width: 100vw;
+    padding-left: 20vw;
+    padding-top: 10vh;
+    background-color: rgba(0, 119, 255, 0.431);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .film-detail-card-desktop div {
+    width: 35vw;
+  }
+  .film-detail-card-desktop div img {
+    width: 25vw;
+    border-radius: 20px;
+    margin-bottom: 5vh;
+  }
+  .film-detail-card-desktop div h2, .film-detail-card-desktop div h3 {
+    display: inline;
+  }
+  .film-detail-card-desktop div h2 {
+    color: hotpink;
+    margin: 5px 0px;
+  }
+  .film-detail-card-desktop ul {
+    margin-top: 20px;
+    font-size: 1.8em;
+    list-style-type: georgian;
+  }
+  .film-detail-card-desktop ul li {
+    font-weight: 700;
+  }
+  .film-detail-card-desktop ul li:hover {
+    font-size: 1.3em;
+    border-radius: 8px;
+    background-color: rgba(255, 192, 203, 0.513);
+    padding-left: 15px;
+  }
+}
+
 .bg-fav {
   width: 100%;
   height: 100%;
@@ -301,6 +372,10 @@ nav {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+}
+
+.heading-fav h1 {
+  color: rgba(0, 119, 255, 0.431);
 }
 
 .fav-title {
@@ -332,7 +407,7 @@ nav {
   width: 50px;
   border-radius: 50%;
   border: 0px;
-  margin: 3px;
+  margin: 4px;
   margin-right: 10px;
 }
 
@@ -357,7 +432,15 @@ nav {
     padding-top: 10vh;
   }
   .fav-title {
-    width: 50vw;
+    width: 30vw;
+    border-radius: 8px;
+    margin: 0px 50px;
+  }
+  .favorite-div {
+    margin-left: 100px;
+  }
+  .heading-fav {
+    margin-top: 3vh;
   }
 }
 
@@ -384,6 +467,11 @@ h4 {
 .link {
   text-decoration: none;
   color: white;
+}
+
+.link:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .bg {
@@ -414,7 +502,8 @@ h4 {
 }
 
 .laser-link:hover {
-  background-image: url("../../public/pngs/green-laser.png");
+  background-color: rgba(0, 119, 255, 0.431);
+  color: pink;
 }
 
 .container {
@@ -445,5 +534,15 @@ h4 {
   width: 30px;
   border-radius: 50%;
   border: 0px;
+}
+
+@media screen and (min-width: 992px) {
+  .padding-top {
+    padding-top: 8vh;
+  }
+  .laser-link {
+    margin-top: 2vh;
+    font-size: 2.6em;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

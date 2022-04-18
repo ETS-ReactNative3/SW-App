@@ -3,7 +3,6 @@
     z-index: 1;
 }
 
-
 // ANIMATION
   .flying-around-animation {
     animation: flying-around 20s linear infinite;
@@ -59,3 +58,9 @@
       height: 100vh;
       overflow: hidden;
   }
+
+  @media screen and (min-width: 992px){
+   .star-wars-img {
+       width: 50vw;
+    }
+   }

@@ -10,7 +10,12 @@
     height: 100vh;
     @include flexCenter(column);
     justify-content: flex-start;
-  }
+}
+.heading-fav {
+    h1 {
+        color: $transparent-blue;
+    }
+} 
 .fav-title {
     width: 100vw;
     text-align: center;
@@ -38,7 +43,7 @@
         width: 50px;
         border-radius: 50%;
         border: 0px;
-        margin: 3px;
+        margin: 4px;
         margin-right: 10px;
     }
 }
@@ -49,6 +54,14 @@
     padding-top: 10vh;
    }
    .fav-title {
-       width: 50vw;
+       width: 30vw;
+       border-radius: 8px;
+       margin: 0px 50px;
+    }
+    .favorite-div {
+        margin-left: 100px;
+    }
+    .heading-fav {
+        margin-top: 3vh;
     }
    }
