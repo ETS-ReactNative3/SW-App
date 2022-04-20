@@ -19,7 +19,7 @@ export default function PopUpCharacterDetails(props) {
     return (
         <React.Fragment>
             {homeworld === null ? <div>Loading ...</div> :
-            <div>
+            <div className='detail-card-container'>
                 <img src='/characters/luke-skywalker.jpg' alt='young luke'/>
                 <h5>Name: {props.character.name}</h5>
                 <h5>Gender: {props.character.gender}</h5>

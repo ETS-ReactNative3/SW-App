@@ -220,6 +220,7 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 45vw;
 }
 
 .filmcard-container div h1 {
@@ -227,7 +228,7 @@ nav {
 }
 
 .margin-btn {
-  margin-left: 170px;
+  margin-left: 100px;
 }
 
 @media screen and (min-width: 992px) {
@@ -304,7 +305,6 @@ nav {
 @media screen and (min-width: 992px) {
   .film-detail-card-desktop {
     width: 100vw;
-    padding-left: 20vw;
     padding-top: 10vh;
     background-color: rgba(0, 119, 255, 0.431);
     display: -webkit-box;
@@ -314,11 +314,12 @@ nav {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
   }
   .film-detail-card-desktop div {
-    width: 35vw;
+    width: 25vw;
   }
   .film-detail-card-desktop div img {
     width: 25vw;
@@ -327,6 +328,7 @@ nav {
   }
   .film-detail-card-desktop div h2, .film-detail-card-desktop div h3 {
     display: inline;
+    font-size: 1.8em;
   }
   .film-detail-card-desktop div h2 {
     color: hotpink;
@@ -447,7 +449,22 @@ nav {
   }
 }
 
+@media screen and (min-width: 992px) {
+  .detail-card-container {
+    position: relative;
+    width: 20%;
+    margin: 0;
+    margin-top: 20px;
+    background: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    overflow: auto;
+    background: rgba(255, 192, 203, 0.233);
+  }
+}
+
 body {
+  font-family: "Montserrat";
   font-size: 10px;
 }
 
@@ -458,12 +475,10 @@ h1 {
 }
 
 h2 {
-  font-family: "Montserrat";
   text-align: center;
 }
 
 h4 {
-  font-family: "Montserrat";
   text-align: center;
   font-weight: 600;
   font-size: 1.8em;

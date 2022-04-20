@@ -42,14 +42,13 @@
 @media screen and (min-width: 992px){
     .film-detail-card-desktop {
         width: 100vw;
-        padding-left: 20vw;
         padding-top: 10vh;
         background-color: $transparent-blue;
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: space-evenly;
         div {
-            width: 35vw;
+            width: 25vw;
             // background-color: aqua;
             img {
                 width: 25vw;
@@ -58,6 +57,7 @@
             }
             h2, h3 {
                 display: inline;
+                font-size: 1.8em;
             }
             h2 {
                 color: hotpink;

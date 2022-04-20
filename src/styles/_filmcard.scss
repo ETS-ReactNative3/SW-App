@@ -18,20 +18,21 @@
     text-align: center;
     border-radius: 10px;
     padding: 10px;
-    margin: 0px 10px;
+    margin: 15px 10px;
     img {
         width: 150px;
         border-radius: 8px;
     }
     div {
       @include flexCenter(column);
+      width: 45vw;
       h1 {
           font-size: 4em;
       }
     }
    }
    .margin-btn {
-     margin-left: 170px;
+     margin-left: 100px;
    }
 
    @media screen and (min-width: 992px){
