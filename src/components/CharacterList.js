@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import PopUpCharacterDetails from './PopUpCharacterDetails';
 
@@ -15,6 +15,10 @@ export default function CharacterList(props) {
             })
             .catch(err => console.log(err))
     }, [] );
+
+    const handlePopUp = () => {
+        {setShowPopUp(!showPopUp)}
+    }
   
     return (
         <React.Fragment>
@@ -23,7 +27,7 @@ export default function CharacterList(props) {
                 {characters.map((character) => {
                     return (
                         <React.Fragment>
-                            <li onClick={() => {setShowPopUp(!showPopUp)}}>{character.name}</li>
+                            <li onClick={handlePopUp}>{character.name}</li>
                             {showPopUp && (
                                 <PopUpCharacterDetails character={character} handleClose={() => setShowPopUp(false)}/>
                             )}

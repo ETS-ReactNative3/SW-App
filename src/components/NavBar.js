@@ -1,14 +1,14 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import { FcLike } from 'react-icons/fc'
 
 export default function NavBar() {
 
   return (
     <nav>
-      <Link className='link' to={"/"}>Home</Link>
-      <Link className='link' to={"/films"}>Collection</Link>
-      <Link className='link' to={"/favs"}><FcLike/></Link>
+      <NavLink className='link' to={"/"}>Home</NavLink>
+      <NavLink className='link' to={"/films"}>Collection</NavLink>
+      <NavLink className='link' to={"/favs"}><FcLike/></NavLink>
     </nav>
   )
 }
